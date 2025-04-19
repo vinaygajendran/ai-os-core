@@ -1,0 +1,4 @@
+psutil==7.0.0
+PyGetWindow==0.0.9
+PyRect==0.2.0
+pywin32==310
