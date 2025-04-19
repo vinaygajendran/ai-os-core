@@ -1,103 +1,106 @@
-AI OS Core
+🧠 README.md for ai-os-core
+markdown
+Copy
+Edit
+# AI OS Core
 
-AI OS Core is a privacy-first, local-first AI operating layer for Windows that observes your system activity,
-learns your behavior over time, and assists you through intelligent, local LLM-powered agents.
+**AI OS Core** is a privacy-first, local-first AI operating layer for Windows that learns from your daily desktop activity to assist you through intelligent agents — powered entirely by on-device LLMs.
 
-No chat window. No cloud dependency. Just intelligence that watches, learns, and helps — all on your machine.
+> ⚙️ No chat window.  
+> 🧠 No cloud dependency.  
+> Just intelligence that watches, learns, and helps.
 
-What It Does
+---
 
-- Installs a System Observer Agent that tracks your desktop activity: apps, windows, timestamps, and interaction patterns.
-- Logs all observations locally in a structured format.
-- Installs and runs a local LLM (e.g., Qwen 2.5B) using Ollama.
-- Launches the first agent: the Journal Agent, which generates a daily journal summarizing your activity using the private LLM.
+## 🚀 What It Does
 
-Everything is offline and stays within your device. You own your data. You control what’s stored and what’s processed.
+- ✅ Installs a **System Observer Agent** to track user behavior: open apps, window titles, time spent, and more.
+- ✅ Logs activity in a structured format (locally).
+- ✅ Installs a local LLM (via [Ollama](https://ollama.com)) — e.g., Qwen 2.5B — for semantic processing.
+- ✅ Runs an intelligent **Journal Agent** that summarizes daily activity into a personal journal using your private LLM.
 
-Project Structure
+All data stays local. You control what is tracked and what is generated.
 
-ai-os-core/
-  - observer/: System observer agent (runs in background)
-  - journal_agent/: Daily summarizer using LLM
-  - llm/: Local LLM integration (via Ollama)
-  - data/: Logs and generated journal entries
-    - journal/
-  - installer/: .exe installer scripts and assets
-  - config/: Settings and flags
-  - main.py: Entry point to orchestrate system
-  - README.md
+---
 
-What It Tracks
+## 🧱 Project Structure
 
-- Active application/process
-- Window titles and duration
-- Time spent per app or task
-- (Optional) Clipboard activity or browser tabs (configurable)
+```bash
+/observer        → Tracks apps, windows, activity
+/journal_agent   → Generates daily summaries using LLM
+/llm             → Runs and connects to local LLM (Ollama)
+/data            → Stores logs and generated journals
+/installer       → Scripts and assets for .exe installer
+💡 How It Works
+Installer sets up:
 
-First Agent: The Journal Agent
+Python environment
 
-The Journal Agent runs once per day (or on-demand) and:
-1. Reads your system activity logs.
-2. Sends them to a local LLM with a summarization prompt.
-3. Writes a clean .md or .txt summary to your journal folder.
+Observer Agent (background task)
 
-Example Output
+Ollama + Qwen 2.5B
 
-2025-04-18 – Daily Journal
+Observer logs user activity (e.g., "Chrome - Gmail | 10:03 AM - 10:17 AM")
 
-You worked primarily in Excel (Budget_Rev1.xlsx) from 9:45 AM to 11:10 AM.
-You had 2 long email sessions with clients.
-You browsed research papers on agent architectures for 45 minutes.
-You were focused for 6.5 hours with minimal context-switching.
-Reflection: Great progress on deep work. Avoid afternoon distractions tomorrow.
+Journal Agent runs daily:
 
-Installation (Coming Soon)
+Collects logs
 
+Sends to LLM with summarization prompt
+
+Generates .md or .txt daily journal
+
+User gets an intelligent, private timeline of their work.
+
+📦 Installation
 Windows-only (for now)
 
-We’re working on:
-- .exe installer via Inno Setup
-- Embedded Python environment
-- Automatic startup registration
-- Ollama + Qwen 2.5 download during install
-- Background process launcher for observer + agent
+Coming soon:
 
-License
+.exe installer package (with embedded Python + Ollama setup)
 
-MIT License – Open for personal, professional, and commercial use.
-Build, fork, and share freely. Contributions welcome!
+Auto-start service for observer and agents
 
-Contributing
+Toggle for clipboard/browser tracking
 
-We’re designing an OS layer for intelligent personal computing — and we want your help.
+📄 License
+MIT License — open to use, build, and improve.
+Pull requests welcome. Let’s build the future of Personal AI together.
 
-Want to contribute?
-- Add new AI agents (/agents/)
-- Improve the observer (/observer/)
-- Plug into local knowledge bases
-- Build email, browser, or automation extensions
+🤝 Contributing
+💬 Want to build agents? Improve tracking? Integrate with tools like Notion, Outlook, or VS Code?
 
-A full CONTRIBUTING.md and roadmap is coming soon.
+Join us!
+Create a new /agents/your_agent folder and follow the contribution guide (coming soon).
 
-Roadmap
+🌟 What's Next?
+📌 GUI Tray Manager
 
-- Phase 1 | System Observer Agent (activity logging)
-- Phase 2 | LLM Setup (Ollama + local Qwen/Mistral)
-- Phase 3 | Journal Agent (daily summarization)
-- Phase 4 | Email Agent (contextual writing + scheduling)
-- Phase 5 | GUI Tray App, visual dashboard
-- Phase 6 | Plugin framework for new agents
-- Future  | Encrypted memory, opt-in cloud sync
+🧠 Custom Embedding Index
 
-Why This Matters
+✉️ Email Assistant Agent
 
-AI OS Core is not a chatbot. It’s not a wrapper. It’s the first step toward a truly personal AI —
-one that learns from you, lives on your machine, and actually helps.
+🔄 Daily Timeline Visualizer
 
-Get Involved
+🔐 Optional encrypted storage mode
 
-Let’s build the future of personal intelligence together.
+🧩 Modular agent plugin system
 
-Start by cloning the repo, running the observer, and sharing your ideas. Feel free to create issues, forks, or PRs.
+👋 Get Involved
+This is just the beginning.
+We’re building a real OS layer — not another chatbot wrapper.
+Follow the roadmap. Submit your ideas. Build your own agents.
 
-git clone https://github.com/your-username/ai-os-core
+Let's create the AI that actually helps.
+
+yaml
+Copy
+Edit
+
+---
+
+Let me know when you're ready:
+- I’ll help you generate a `CONTRIBUTING.md`, `LICENSE`, and `INSTALL.md` next.
+- We can also set up GitHub Issues → for `Phase 1: Observer`, `Phase 2: LLM Setup`, etc.
+
+Ready to commit the `README.md` and get your first branch going?
