@@ -1,0 +1,12 @@
+ai-os-core/
+├── observer/           → logs apps & windows
+├── journal_agent/      → uses LLM to summarize logs
+├── llm/                → connects to Ollama / local LLM
+├── data/
+│   └── journal/        → output summaries
+├── config/             → JSON config files
+├── installer/          → later for .exe packaging
+├── main.py             → orchestrator
+├── README.md
+├── LICENSE
+└── CONTRIBUTING.md

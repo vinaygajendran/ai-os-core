@@ -1,0 +1,8 @@
+{
+    "journal_generation_time": "20:00",
+    "observer_log_path": "data/logs/",
+    "journal_output_path": "data/journal/",
+    "llm_model": "qwen:2.5b",
+    "summarization_prompt": "Summarize this day's work clearly and concisely."
+  }
+  
