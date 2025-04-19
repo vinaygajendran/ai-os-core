@@ -1,6 +1,7 @@
 📊 Time Spent by Application
 ------------------------------
-brave.exe            0.13 min
-Cursor.exe           0.13 min
+brave.exe            0.2 min
+Cursor.exe           0.2 min
 uTorrent.exe         0.03 min
 Notepad.exe          0.03 min
+firefox.exe          0.03 min
