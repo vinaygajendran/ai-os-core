@@ -1,0 +1,4 @@
+📊 Time Spent by Application
+------------------------------
+brave.exe            0.23 min
+Cursor.exe           0.1 min
