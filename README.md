@@ -86,21 +86,50 @@ Create a new /agents/your_agent folder and follow the contribution guide (coming
 
 🧩 Modular agent plugin system
 
-👋 Get Involved
-This is just the beginning.
-We’re building a real OS layer — not another chatbot wrapper.
-Follow the roadmap. Submit your ideas. Build your own agents.
+🧠 Setting Up the Local LLM (Qwen 2.5B via Ollama)
+AI OS Core uses Ollama to run the LLM locally — no internet or cloud APIs needed.
+The default model used is Qwen 2.5B, which is lightweight and fast for journaling tasks.
 
-Let's create the AI that actually helps.
+📦 Step 1: Install Ollama
+Download and install Ollama for Windows from:
 
-yaml
+👉 https://ollama.com/download
+
+Once installed, test it:
+
+bash
 Copy
 Edit
+ollama --version
 
----
+🧠 Step 2: Pull the Qwen Model
+In your terminal, run:
 
-Let me know when you're ready:
-- I’ll help you generate a `CONTRIBUTING.md`, `LICENSE`, and `INSTALL.md` next.
-- We can also set up GitHub Issues → for `Phase 1: Observer`, `Phase 2: LLM Setup`, etc.
+bash
+Copy
+Edit
+ollama pull qwen:2.5b
+This will download the model and get it ready for use.
 
-Ready to commit the `README.md` and get your first branch going?
+You can test it with:
+
+bash
+Copy
+Edit
+ollama run qwen:2.5b
+You should see a prompt to start chatting with the model locally.
+
+🤖 Step 3: Let the Journal Agent Use It
+When you run python main.py, the Journal Agent automatically:
+
+Reads your system usage logs
+
+Builds a prompt for Qwen
+
+Sends it via Ollama’s local server
+
+Writes the journal to data/journal/YYYY-MM-DD_journal.md
+
+No chat window, no OpenAI key, no privacy risk — just your own on-device LLM.
+
+
